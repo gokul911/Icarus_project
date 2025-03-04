@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.canvas {
+  flex-grow: 1;
+  height: 100vh;
+  width: 100vw;
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.settings {
+  width: 280px;
+  padding: 15px;
+  background-color: rgba(30, 30, 30, 0.95);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 15px;
+  border-left: 2px solid white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.planet-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+.controls {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 12px;
+  padding: 12px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #555;
   color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #777;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="range"] {
+  width: 100%;
+  cursor: pointer;
 }
